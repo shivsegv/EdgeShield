@@ -1,0 +1,29 @@
+services:
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: password
+    ports: ["5432:5432"]
+  demo-app:
+    build: ../demo-app
+    ports: ["5001:5000"]
+  ingest:
+    build: ../ingest
+    ports: ["8081:8081"]
+    depends_on: ["postgres"]
+    environment:
+      POSTGRES_PASSWORD: password
+    command: ["./wait-for-postgres.sh", "postgres", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8081"]
+  edge:
+    build: ../edge
+    ports: ["8080:8080"]
+    environment:
+      - REDIS_ADDR=redis:6379
+    depends_on: ["redis","ingest","demo-app"]
+  ui:
+    build: ../ui
+    ports: ["3000:3000"]
+    depends_on: ["edge", "ingest"]
