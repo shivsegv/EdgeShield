@@ -1,4 +1,4 @@
-# Edge Rate Limiter
+# EdgeShield
 
 An end-to-end edge defense demo that blocks abusive traffic before it hits your core services. A Go reverse proxy applies Redis-backed rate limits, a FastAPI ingest pipeline records every decision in Postgres, and a SOLID React/MUI console turns the telemetry into actionable insight.
 
