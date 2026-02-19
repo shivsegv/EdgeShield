@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"edge-rate-limiter/edge/internal/config"
-	"edge-rate-limiter/edge/internal/domain"
-	"edge-rate-limiter/edge/internal/events"
-	"edge-rate-limiter/edge/internal/limiter"
-	"edge-rate-limiter/edge/internal/telemetry"
+	"edgeshield/edge/internal/config"
+	"edgeshield/edge/internal/domain"
+	"edgeshield/edge/internal/events"
+	"edgeshield/edge/internal/limiter"
+	"edgeshield/edge/internal/telemetry"
 )
 
 // Handler coordinates proxying, rate limiting, and telemetry emission.

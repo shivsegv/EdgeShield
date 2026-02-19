@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
-	"edge-rate-limiter/edge/internal/domain"
-	"edge-rate-limiter/edge/internal/ingest"
-	"edge-rate-limiter/edge/internal/telemetry"
+	"edgeshield/edge/internal/domain"
+	"edgeshield/edge/internal/ingest"
+	"edgeshield/edge/internal/telemetry"
 )
 
 // Dispatcher handles asynchronous delivery of telemetry events.

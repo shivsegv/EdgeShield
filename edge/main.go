@@ -10,12 +10,12 @@ import (
 	"syscall"
 	"time"
 
-	"edge-rate-limiter/edge/internal/config"
-	"edge-rate-limiter/edge/internal/events"
-	"edge-rate-limiter/edge/internal/ingest"
-	"edge-rate-limiter/edge/internal/limiter"
-	"edge-rate-limiter/edge/internal/server"
-	"edge-rate-limiter/edge/internal/telemetry"
+	"edgeshield/edge/internal/config"
+	"edgeshield/edge/internal/events"
+	"edgeshield/edge/internal/ingest"
+	"edgeshield/edge/internal/limiter"
+	"edgeshield/edge/internal/server"
+	"edgeshield/edge/internal/telemetry"
 
 	"github.com/go-redis/redis/v8"
 	"github.com/prometheus/client_golang/prometheus"

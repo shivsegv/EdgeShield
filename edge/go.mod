@@ -1,4 +1,4 @@
-module edge-rate-limiter/edge
+module edgeshield/edge
 
 go 1.21
 

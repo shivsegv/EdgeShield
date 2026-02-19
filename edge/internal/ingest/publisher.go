@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"edge-rate-limiter/edge/internal/domain"
+	"edgeshield/edge/internal/domain"
 )
 
 // Publisher represents something that can emit telemetry events to a downstream system.
