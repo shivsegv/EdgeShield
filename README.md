@@ -63,7 +63,7 @@ Allowed traffic continues to the bundled `demo-app` backend through the edge pro
 ## Repository Layout
 
 ```
-edge-rate-limiter/
+EdgeShield/
 ├── edge/          # Go proxy with internal packages for config, limiter, events, telemetry, server
 ├── ingest/        # FastAPI ingest API backed by Postgres
 ├── ui/            # React operations console (components/hooks/utils extracted for SOLID readability)
@@ -86,8 +86,8 @@ edge-rate-limiter/
 ## Quick Start
 
 ```bash
-git clone https://github.com/shivsegv/edge-rate-limiter.git
-cd edge-rate-limiter/infra
+git clone https://github.com/shivsegv/EdgeShield.git
+cd EdgeShield/infra
 docker compose up --build
 ```
 
